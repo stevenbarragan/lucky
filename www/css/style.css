@@ -4,7 +4,7 @@
 }
 #calculated-numbers .number{
   display: inline-block;
-  padding: 10px;
+  padding: 15px 20px;
 }
 #calculated-numbers .number-0{
   font-size: 5em;

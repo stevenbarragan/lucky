@@ -4,6 +4,10 @@ angular.module('luck.controllers', [])
   $scope.goToConfig = function(){
     $state.go('config');
   }
+
+  $scope.displayConfig = function(){
+    return $state.current.name !== 'config';
+  }
 }])
 
 .controller('ConfigCtrl', ['$scope', 'localstorage', '$state', function($scope, localstorage, $state){
