@@ -1,5 +1,11 @@
 angular.module('luck.controllers', [])
 
+.controller('navCtrl', ['$scope', '$state', function($scope, $state){
+  $scope.goToConfig = function(){
+    $state.go('config');
+  }
+}])
+
 .controller('ConfigCtrl', ['$scope', 'localstorage', '$state', function($scope, localstorage, $state){
   $scope.data = localstorage.getObject('user');
   $scope.saveConfig = function(){
@@ -9,7 +15,7 @@ angular.module('luck.controllers', [])
 }])
 
 .controller('NumberCtrl', ['$scope', 'localstorage', function($scope, localstorage){
-  var luckyNumbers;
+  var lastString;
   $scope.data = localstorage.getObject('user');
 
   function toCode(string){
@@ -47,11 +53,16 @@ angular.module('luck.controllers', [])
     return numbers;
   }
 
-  $scope.lukyNumbers = function(){
-    name = toCode($scope.data.name)
-    date = toCode($scope.data.date)
+  function buildString(){
+    var name = toCode($scope.data.name),
+    date = toCode($scope.data.date),
+    today = toCode((new Date()).toDateString());
+    return name + date + today;
+  }
 
-    first_number = sumString(name + date);
+  $scope.luckyNumbers = function(){
+    var string = buildString(),
+    first_number = sumString(string);
     return serie(first_number);
-  }();
+  };
 }]);

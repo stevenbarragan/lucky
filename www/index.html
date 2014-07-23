@@ -25,9 +25,10 @@
   </head>
   <body ng-app="luck">
     <ion-pane>
-      <ion-nav-bar class="nav-title-slide bar-right">
-        <ion-nav-back-button class="button-icon ion-arrow-left-c">
-        </ion-nav-back-button>
+      <ion-nav-bar class="nav-title-slide bar-right" ng-controller="navCtrl">
+        <div class="buttons">
+          <button class="button-icon ion-navicon-round" ng-click="goToConfig()"></button>
+        </div>
       </ion-nav-bar>
       <ion-nav-view animation="slide-left-right"></ion-nav-view>
     </ion-pane>

@@ -1,3 +1,26 @@
 #calculated-numbers{
   text-align: center;
+  position: relative;
+}
+#calculated-numbers .number{
+  display: inline-block;
+  padding: 10px;
+}
+#calculated-numbers .number-0{
+  font-size: 5em;
+}
+#calculated-numbers .number-1{
+  font-size: 4.5em;
+}
+#calculated-numbers .number-2{
+  font-size: 4em;
+}
+#calculated-numbers .number-3{
+  font-size: 3.5em;
+}
+#calculated-numbers .number-4{
+  font-size: 3em;
+}
+.clearfix{
+  clear: both;
 }
