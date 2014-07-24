@@ -32,5 +32,5 @@ angular.module('luck', ['ionic', 'luck.controllers', 'luck.utilities'])
       controller: 'NumberCtrl'
     })
 
-  $urlRouterProvider.otherwise('/config');
+  $urlRouterProvider.otherwise('/numbers');
 })

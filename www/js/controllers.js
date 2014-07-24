@@ -18,9 +18,14 @@ angular.module('luck.controllers', [])
   };
 }])
 
-.controller('NumberCtrl', ['$scope', 'localstorage', function($scope, localstorage){
+.controller('NumberCtrl', ['$scope', 'localstorage', '$state', function($scope, localstorage, $state){
   var lastString;
+
   $scope.data = localstorage.getObject('user');
+
+  if(!$scope.data.name){
+    $state.go('config');
+  }
 
   function toCode(string){
     return string.split('').reduce(function(prev, current){
