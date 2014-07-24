@@ -2,11 +2,11 @@
 <widget id="com.ionicframework.luck288099" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
   <name>luck</name>
   <description>
-        An Ionic Framework and Cordova project.
-    </description>
-  <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
-    </author>
+    Do you want to know which are your lucky numbers for each day? This app is just for you! Enjoy!
+  </description>
+  <author email="me@steven.mx" href="http://steven.mx/">
+    Steven Barragán
+  </author>
   <content src="index.html"/>
   <access origin="*"/>
   <preference name="webviewbounce" value="false"/>
